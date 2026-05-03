@@ -108,16 +108,6 @@ const BASE_URL = 'http://localhost:8080/api'; // Ajuste para seu servidor
 }
 ```
 
-#### Disponibilidade (GET /api/espacos/{id}/disponibilidade?data=YYYY-MM-DD)
-```json
-[
-  { "horario": "08:00", "disponivel": true },
-  { "horario": "09:00", "disponivel": true },
-  { "horario": "10:00", "disponivel": false },
-  ...
-]
-```
-
 #### Erros
 ```json
 {
@@ -132,23 +122,7 @@ const BASE_URL = 'http://localhost:8080/api'; // Ajuste para seu servidor
 O token é salvo via `localStorage.setItem('agendasys_token', token)` após o login.
 A camada `api.js` o inclui automaticamente no header `Authorization: Bearer <token>` em todas as requisições.
 
-### 5. Substituindo dados mock por dados reais
-
-Cada módulo JS possui comentários `// TODO:` indicando onde substituir os dados estáticos pelas chamadas reais. Exemplo em `js/agendamentos.js`:
-
-```js
-// Substituir por:
-const payload = await API.Agendamentos.criar(formData);
-```
-
-E no calendário (`js/calendar.js`):
-
-```js
-// Substituir por:
-events = await API.Agendamentos.listar({ dataInicio, dataFim });
-```
-
-### 6. CORS no Spring Boot
+### 5. CORS no Spring Boot
 
 Adicione ao seu `WebMvcConfigurer` ou use a anotação `@CrossOrigin`:
 
