@@ -1,0 +1,210 @@
+/* Reutilizando a base do AgendaSys */
+.login-page {
+    background: var(--color-background-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-card {
+    background: var(--color-background-primary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 40px;
+    border: 1px solid var(--color-border-tertiary);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.logo-icon-large {
+    background: var(--blue-600);
+    width: 56px;
+    height: 56px;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    box-shadow: 0 4px 12px rgba(24, 95, 165, 0.2);
+}
+
+.logo-icon-large svg {
+    width: 32px;
+    height: 32px;
+}
+
+.login-header h1 {
+    font-size: 24px;
+    color: var(--blue-900);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--color-text-primary);
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot-link {
+    font-size: 12px;
+    color: var(--blue-600);
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"]
+ {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--gray-100);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    transition: all 0.2s;
+    background: #fafafa;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--blue-400);
+    background: #fff;
+    box-shadow: 0 0 0 3px var(--blue-50);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: var(--blue-600);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background: var(--blue-800);
+}
+
+.login-footer {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--color-text-tertiary);
+}
+/* Estilo adicional para o checkbox */
+input[type="checkbox"] {
+    accent-color: var(--teal-600);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Ajuste para botões de cores variadas */
+.btn-login:active {
+    filter: brightness(0.9);
+    transform: scale(0.98);
+}
+
+/* Container de linha para Nome e Sobrenome */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px; /* Espaço entre Nome e Sobrenome */
+}
+
+/* Ajuste para telas pequenas (celular) */
+@media (max-width: 480px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0; /* O margin-bottom do form-group já resolve */
+    }
+}
+
+/* Estilo do Grupo de Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--blue-600);
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+.checkbox-group label {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* Classes de apoio para links e textos */
+.link-primary {
+    color: var(--blue-600);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-primary:hover {
+    text-decoration: underline;
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.signup-prompt {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Garantindo que o ícone do topo também volte a ser azul */
+.login-header .logo-icon-large {
+    background: var(--blue-600) !important;
+}

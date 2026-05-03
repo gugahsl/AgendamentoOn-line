@@ -1,0 +1,130 @@
+/* =============================================
+   AgendaSys — Calendar Styles
+   ============================================= */
+
+   .calendar {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 16px;
+  }
+  
+  .cal-grid {
+    background: var(--color-background-primary);
+    border-radius: var(--border-radius-lg);
+    border: 0.5px solid var(--color-border-tertiary);
+  }
+  
+  .cal-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  
+  .cal-month {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  .cal-nav-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    border: 0.5px solid var(--color-border-tertiary);
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    font-size: 16px;
+  }
+  
+  .cal-nav-btn:hover {
+    background: var(--color-background-secondary);
+  }
+  
+  .cal-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0 12px;
+  }
+  
+  .cal-weekday {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-tertiary);
+    padding: 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .cal-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0 12px 12px;
+    gap: 2px;
+  }
+  
+  .cal-day {
+    min-height: 72px;
+    border-radius: 8px;
+    padding: 6px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .cal-day:hover {
+    background: var(--color-background-secondary);
+  }
+  
+  .cal-day.today .day-num {
+    background: var(--blue-400);
+    color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+  }
+  
+  .cal-day.other-month .day-num {
+    color: var(--color-text-tertiary);
+  }
+  
+  .cal-day.selected {
+    background: var(--blue-50);
+  }
+  
+  .day-num {
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cal-event {
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+  }
+  
+  .cal-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }

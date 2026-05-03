@@ -1,0 +1,208 @@
+/* =============================================
+   AgendaSys — Layout: Sidebar, Topbar, Main
+   ============================================= */
+
+/* ---- SIDEBAR ---- */
+.sidebar {
+    width: var(--sidebar-w);
+    background: var(--color-background-primary);
+    border-right: 0.5px solid var(--color-border-tertiary);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+  }
+  
+  .sidebar-logo {
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 18px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  
+  .logo-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--blue-400);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+  }
+  
+  .logo-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+  
+  .nav-section {
+    padding: 12px 10px 4px;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-tertiary);
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 1px 6px;
+    font-size: 13.5px;
+    color: var(--color-text-secondary);
+    transition: background 0.15s;
+    user-select: none;
+  }
+  
+  .nav-item:hover {
+    background: var(--color-background-secondary);
+  }
+  
+  .nav-item.active {
+    background: var(--blue-50);
+    color: var(--blue-800);
+    font-weight: 500;
+  }
+  
+  .nav-item svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+  
+  .sidebar-bottom {
+    margin-top: auto;
+    padding: 12px;
+    border-top: 0.5px solid var(--color-border-tertiary);
+  }
+  
+  .user-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .user-row:hover {
+    background: var(--color-background-secondary);
+  }
+  
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--blue-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--blue-800);
+    flex-shrink: 0;
+  }
+  
+  .user-name {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .user-role {
+    font-size: 11px;
+    color: var(--color-text-tertiary);
+  }
+  
+  /* ---- MAIN LAYOUT ---- */
+  .main {
+    margin-left: var(--sidebar-w);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* ---- TOPBAR ---- */
+  .topbar {
+    height: var(--header-h);
+    background: var(--color-background-primary);
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  
+  .topbar-title {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  .topbar-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  /* ---- CONTENT AREA ---- */
+  .content {
+    flex: 1;
+    padding: 24px;
+  }
+  
+  .page {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .page.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  /* ---- SECTION HEADERS ---- */
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .section-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* ---- GRIDS ---- */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }

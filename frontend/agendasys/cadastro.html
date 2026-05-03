@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro | AgendaSys</title>
+    <link rel="stylesheet" href="/css/variables.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body class="login-page">
+    <div class="login-container" style="max-width: 480px">
+      <div class="login-card">
+        <div class="login-header">
+          <div class="logo-icon-large" style="background: var(--teal-600)">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#fff"
+              stroke-width="1.5"
+            >
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="8.5" cy="7" r="4" />
+              <line x1="20" y1="8" x2="20" y2="14" />
+              <line x1="17" y1="11" x2="23" y2="11" />
+            </svg>
+          </div>
+          <h1>Crie sua conta</h1>
+          <p>Comece a gerenciar seus agendamentos hoje mesmo</p>
+        </div>
+
+        <form class="login-form">
+          <div class="form-row">
+            <div class="form-group" id="nome-cad">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" placeholder="Ex: João" required />
+            </div>
+            <div class="form-group" id="sobrenome-cad">
+              <label for="sobrenome">Sobrenome</label>
+              <input
+                type="text"
+                id="sobrenome"
+                placeholder="Ex: Silva"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail Profissional</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="exemplo@empresa.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Mínimo 8 caracteres"
+              required
+            />
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="termos" required />
+            <label for="termos">
+              Eu concordo com os <a href="#">Termos</a> e a
+              <a href="#">Privacidade</a>.
+            </label>
+          </div>
+
+          <button type="submit" class="btn-login">Criar minha conta</button>
+
+          <div class="signup-prompt">
+            <span class="text-secondary">Já possui conta?</span>
+            <a href="login.html" class="link-primary">Voltar para o Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script src="/forms/js/api.js"></script>
+  <script src="/forms/js/ui.js"></script>
+  <script src="/forms/js/auth.js"></script>
+  <script>
+    AuthModule.initCadastro();
+  </script>
+</html>

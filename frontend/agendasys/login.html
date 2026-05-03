@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | AgendaSys</title>
+    <link rel="stylesheet" href="/css/variables.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body class="login-page">
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <div class="logo-icon-large">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#fff"
+              stroke-width="1.5"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <line x1="3" y1="9" x2="21" y2="9" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+            </svg>
+          </div>
+          <h1>AgendaSys</h1>
+          <p>Gerenciamento de Espaços e Agendamentos</p>
+        </div>
+
+        <form class="login-form" id="loginForm">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <div class="input-wrapper">
+              <input
+                type="email"
+                id="email"
+                placeholder="admin@agendasys.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="password">Senha</label>
+              <a href="#" class="forgot-link">Esqueceu a senha?</a>
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-login">Entrar no Sistema</button>
+
+          <div class="login-footer">
+            &copy; 2026 AgendaSys. Todos os direitos reservados.
+          </div>
+
+          <div
+            class="signup-prompt"
+            style="margin-top: 20px; text-align: center; font-size: 13px"
+          >
+            <span style="color: var(--color-text-secondary)"
+              >Não tem uma conta?</span
+            >
+            <a
+              href="cadastro.html"
+              style="
+                color: var(--blue-600);
+                text-decoration: none;
+                font-weight: 600;
+              "
+              >Cadastre-se</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/forms/js/api.js"></script>
+    <script src="/forms/js/ui.js"></script>
+    <script src="/forms/js/auth.js"></script>
+    
+    <script>
+      // Inicializa o módulo de autenticação após o carregamento dos scripts
+      document.addEventListener('DOMContentLoaded', () => {
+        if (typeof AuthModule !== 'undefined' && AuthModule.initLogin) {
+          AuthModule.initLogin();
+        } else {
+          console.error("Erro: AuthModule não foi carregado corretamente.");
+        }
+      });
+    </script>
+  </body>
+</html>
